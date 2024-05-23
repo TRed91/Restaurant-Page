@@ -1,3 +1,4 @@
-import pageContent from './pageload';
+import './style.css';
+import pageHome from './page-home';
 
-pageContent();
+pageHome();

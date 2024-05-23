@@ -9,7 +9,7 @@ export default function content(){
 
     imgMain.src = img;
     headline.innerHTML = "Tomi's Restaurant";
-    introText.innerHTML = 'Here you will the fanciest food in town! Everything from Pepperoni Pizza to canned salmon. We got it all!'
+    introText.innerHTML = 'Here you will find he fanciest food in town! <br>Everything from Pepperoni Pizza to canned salmon. We got it all!'
 
     content.appendChild(imgMain);
     content.appendChild(headline);

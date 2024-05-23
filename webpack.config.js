@@ -3,9 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { type } = require('os');
 
 module.exports = {
+    mode: 'development',
     entry: './src/index.js',
-    
-    plugins: [
+    devtool: 'inline-source-map',
+    plugins: [  
         new HtmlWebpackPlugin({
             template: './src/index.html',
         }),
