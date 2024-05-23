@@ -1,11 +1,15 @@
-
-
 export default function content(){
     const content = document.querySelector('#content');
+
+    while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
     
     
     const headline = document.createElement('h1');
     const introText = document.createElement('p');
+
+    introText.setAttribute('class', 'home-text')
 
     
     headline.innerHTML = "Tomi's Restaurant";

@@ -1,4 +1,10 @@
 export default function menuContent(){
+    const content = document.querySelector('#content');
+
+    while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
+
     class MenuItem {
         constructor(name, desc, price){
             this.name = name;
@@ -13,8 +19,6 @@ export default function menuContent(){
         new MenuItem('Grilled Tuna', 'description', '12$'),
         new MenuItem('Lasagna', 'description', '8$')
     ];
-
-    const content = document.querySelector('#content');
     
     const headline = document.createElement('h2');
     const menu = document.createElement('ul');
@@ -30,6 +34,10 @@ export default function menuContent(){
             listItemContainer.appendChild(listItemName);
             listItemContainer.appendChild(listItemDesc);
             listItemContainer.appendChild(listItemPrice);
+
+            listItemContainer.setAttribute('class', 'liContainer')
+            listItemDesc.setAttribute('class', 'desc');
+            listItemPrice.setAttribute('class', 'price')
            
             listItemName.innerHTML = e.name;
             listItemDesc.innerHTML = e.desc;
@@ -43,5 +51,5 @@ export default function menuContent(){
     content.appendChild(headline);
     content.appendChild(menu);
 
-    return {content, menuList}
+    return content
 }
