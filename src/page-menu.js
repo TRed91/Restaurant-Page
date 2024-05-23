@@ -1,31 +1,47 @@
-import img from './pexels-pixabay-260922.jpg'
-
-class MenuItem {
-    constructor(name, description, price){
-        this.name = name;
-        this.description = description;
-        this.price = price;
-    }
-};
-
-const Item1 = new MenuItem("Schnitzel", "description", "10$");
-
 export default function menuContent(){
+    class MenuItem {
+        constructor(name, desc, price){
+            this.name = name;
+            this.desc = desc;
+            this.price = price;
+        }
+    }
+  
+    const menuList = [
+        new MenuItem('Schnitzl', 'description', '10$'),
+        new MenuItem('Pepperoni Pizza', 'description', '12$'),
+        new MenuItem('Grilled Tuna', 'description', '12$'),
+        new MenuItem('Lasagna', 'description', '8$')
+    ];
+
     const content = document.querySelector('#content');
     
-    const imgMain = document.createElement('img');
     const headline = document.createElement('h2');
     const menu = document.createElement('ul');
     
+    menuList.forEach(e => 
+        {
+            const listItemContainer = document.createElement('div');
+            const listItemName = document.createElement('h3');
+            const listItemDesc = document.createElement('p');
+            const listItemPrice = document.createElement('div');
     
+            menu.appendChild(listItemContainer);
+            listItemContainer.appendChild(listItemName);
+            listItemContainer.appendChild(listItemDesc);
+            listItemContainer.appendChild(listItemPrice);
+           
+            listItemName.innerHTML = e.name;
+            listItemDesc.innerHTML = e.desc;
+            listItemPrice.innerHTML = e.price;
+        }
 
-    imgMain.src = img;
+    )
+
     headline.innerHTML = "Menu";
     
-
-    content.appendChild(imgMain);
     content.appendChild(headline);
-    content.appendChild(introText);
+    content.appendChild(menu);
 
-    return content
+    return {content, menuList}
 }

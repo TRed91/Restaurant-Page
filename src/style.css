@@ -22,7 +22,7 @@ img {
     top: 0px;
     left: 0px
 }
-h1 {
+h1, h2 {
     color: var(--color-text-one);
     text-align: center;
     font-size: 5rem;
