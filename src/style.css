@@ -1,5 +1,19 @@
+@font-face {
+    font-family: 'glacial';
+    src: url('./glacialindifference-regular-webfont.woff2') format('woff2'),
+        url('./glacialindifference-regular-webfont.woff') format('woff');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'glacial';
+    src: url('./glacialindifference-bold-webfont.woff2') format('woff2'),
+        url('./glacialindifference-bold-webfont.woff') format('woff');
+    font-weight: bold;
+}
+
 :root {
     --color-text-one: rgb(255, 239, 197);
+    --bg-grad-one: linear-gradient(0deg, rgb(227, 181, 89) 0%, rgb(248, 229, 121) 100%);
 }
 
 h1, h2, h3 {
@@ -9,7 +23,7 @@ h1, h2, h3 {
 
 body {
     background-color: rgb(22, 21, 26);
-      
+    font-family: 'glacial', Arial, Helvetica, sans-serif;
 }
 
 #content {
@@ -88,10 +102,12 @@ ul {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 20vh;
+    padding: 20px;
 }
 
 .liContainer{
-    background-color: var(--color-text-one);
+    background: var(--bg-grad-one);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -106,8 +122,9 @@ h3 {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
 }
 
-.desc {
-    
+.desc, .about-text {
+    padding: 10px 20px;
+    color: #262626;
 }
 
 .price {
@@ -118,8 +135,8 @@ h3 {
 }
 
 .about-container {
-    margin-bottom: 30vh;
-    background-color: var(--color-text-one);
+    margin-bottom: 25vh;
+    background: var(--bg-grad-one);
     border-radius: 10px;
     box-shadow: 0px 0px 5px var(--color-text-one);
     padding: 50px;
@@ -133,4 +150,8 @@ h3 {
 .about-text {
     font-size: 20px;
     font-style: italic;
+}
+
+.signed {
+    text-align: end;
 }

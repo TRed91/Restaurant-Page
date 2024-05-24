@@ -14,10 +14,10 @@ export default function menuContent(){
     }
   
     const menuList = [
-        new MenuItem('Schnitzl', 'description', '10$'),
-        new MenuItem('Pepperoni Pizza', 'description', '12$'),
-        new MenuItem('Grilled Tuna', 'description', '12$'),
-        new MenuItem('Lasagna', 'description', '8$')
+        new MenuItem('Schnitzl', 'Austrian style Schnitzl from turkey. Breaded and no sauce. Comes with fries or rice.', '10$'),
+        new MenuItem('Pepperoni Pizza', 'Best and only true form of pizza. If you want any other toppings please let us know so we can escort you to the exit.', '12$'),
+        new MenuItem('Grilled Tuna', "We assume it's tuna. Might be salmon. I'm not really a fish expert. Anyway. Comes with rice and lemon", '12$'),
+        new MenuItem('Lasagna', "I don't know anything about lasagna. Please don't order it but if you do I will order some from the Italian place across the street.", '8$')
     ];
     
     const headline = document.createElement('h2');

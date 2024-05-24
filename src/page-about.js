@@ -8,19 +8,23 @@ export default function content(){
     const aboutContainer = document.createElement('div');
     const aboutTitle = document.createElement('h3');
     const aboutText = document.createElement('p');
+    const aboutSigned = document.createElement('p')
 
     aboutContainer.setAttribute('class', 'about-container');
     aboutTitle.setAttribute('class', 'about-title');
     aboutText.setAttribute('class', 'about-text');
+    aboutSigned.setAttribute('class', 'about-text signed');
 
     headline.innerHTML = "Tomi's Restaurant";
     aboutTitle.innerHTML = "About"
     aboutText.innerHTML = "We are a small fake business run by no other than Tomi the great himself.<br>We make good food, you should try it.<br> Totally not ordered from foodora.";
+    aboutSigned.innerHTML = "-Tomi himself"
 
     content.appendChild(headline);
     content.appendChild(aboutContainer);
     aboutContainer.appendChild(aboutTitle);
     aboutContainer.appendChild(aboutText);
+    aboutContainer.appendChild(aboutSigned);
 
     return content
 }
