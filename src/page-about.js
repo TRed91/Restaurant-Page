@@ -6,7 +6,7 @@ export default function content(){
 
     const headline = document.createElement('h1');
     const aboutContainer = document.createElement('div');
-    const aboutTitle = document.createElement('h2');
+    const aboutTitle = document.createElement('h3');
     const aboutText = document.createElement('p');
 
     aboutContainer.setAttribute('class', 'about-container');
