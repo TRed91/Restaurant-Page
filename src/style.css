@@ -55,7 +55,7 @@ h1, h2 {
 .home-text {
     color: var(--color-text-one);
     font-size: 2rem;
-    min-width: 630px;
+    width: 60%;
     line-height: 3rem;
     letter-spacing: 0.3rem;
     text-align: center;
